@@ -20,6 +20,6 @@ BinIT is a pollution control website that empowers users to report pollution inc
 
 - Report Pollution: Join us in the fight against pollution by reporting incidents in your area. Together, we can work towards cleaner and healthier communities.
 - Spread Awareness: Share our platform with your friends, family, and social networks. By raising awareness about pollution issues and promoting sustainable practices, we can create a more eco-conscious society.
-- Volunteer: Get involved in local cleanup drives, tree planting activities, and community initiatives aimed at environmental conservation. Your efforts can have a positive impact on the environment and inspire others to take action.
+- Volunteer: Get involved in local cleanup drives and community initiatives aimed at environmental conservation. Your efforts can have a positive impact on the environment and inspire others to take action.
 
 Join BinIT today and be part of the solution to combat pollution and preserve our planet for future generations. Together, we can make a difference!
