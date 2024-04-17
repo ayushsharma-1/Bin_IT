@@ -7,7 +7,7 @@ BinIT is a pollution control website that empowers users to report pollution inc
 - Pollution Reporting: Users can easily report pollution incidents by uploading images and providing relevant details about the location and type of pollution.
 - Image Analysis: Our platform employs machine learning models to analyze pollution images. These models classify the pollution type and assess its characteristics such as recyclability, biodegradability, and reusability.
 - Data Collection: We collect pollution data from user reports to gain insights into pollution trends and patterns. This data helps us understand the extent of pollution and take necessary actions for mitigation.
-- Education and Awareness: We provide educational resources and raise awareness about pollution control and environmental sustainability. Through articles, guides, and infographics, we aim to empower individuals to take action against pollution.
+- Education and Awareness: We provide educational resources and raise awareness about pollution control and environmental sustainability. Through articles, guides, and infographics, we aim to empower every individual to take action against pollution.
 
 ## How It Works:
 
