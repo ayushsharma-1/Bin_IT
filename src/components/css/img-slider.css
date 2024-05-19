@@ -1,0 +1,84 @@
+.carousel {
+    margin-top: 1.8rem;
+    margin-left: 4rem;
+    width: 91%;
+    height: 50%;
+    border-radius: 1rem;
+    border: 2px solid black;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@media screen and (max-width: 1048px) {
+    .carousel {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        height: 45%; /* Adjust height for smaller screens */
+    }
+    .carousel-item {
+        height: 450px; /* Adjust item height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 40%; /* Adjust height for smaller screens */
+    }
+    .carousel-item {
+        height: 400px; /* Adjust item height for smaller screens */
+    }
+    .prev, .next {
+        font-size: 20px; /* Adjust button size for smaller screens */
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        height: 35%; /* Adjust height for smaller screens */
+    }
+    .carousel-item {
+        height: 350px; /* Adjust item height for smaller screens */
+    }
+    .prev, .next {
+        font-size: 18px; /* Adjust button size for smaller screens */
+        padding: 6px;
+    }
+}
