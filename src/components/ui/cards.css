@@ -3,12 +3,22 @@
   max-width: 486.76px;
   height: 100%;
   position: relative;
+<<<<<<< Updated upstream
   background: white;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .image {
+=======
+  background: #C6FCFC;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.contentCard .image {
+>>>>>>> Stashed changes
   width: 100%;
   height: auto;
   aspect-ratio: 2 / 1;
@@ -16,7 +26,11 @@
   background: #B9B9B9;
 }
 
+<<<<<<< Updated upstream
 .image img{
+=======
+.contentCard .image img{
+>>>>>>> Stashed changes
   width: 100%;
   height: 100%;
   object-fit: cover;

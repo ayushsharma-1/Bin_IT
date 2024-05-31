@@ -5,7 +5,11 @@
     align-items: center;
     gap: 10rem;
     padding: 2rem 5rem;
+<<<<<<< Updated upstream
     background: rgba(35, 217, 133, 0.75);
+=======
+    background: #5C9F5F;
+>>>>>>> Stashed changes
 }
 
 .info{
@@ -33,7 +37,11 @@
     padding: 0 1rem;
     color: #000000;
     font-size: 15px;
+<<<<<<< Updated upstream
     border: 1px solid #2B293D;
+=======
+    border: 3px solid #2B293D;
+>>>>>>> Stashed changes
     border-radius: 6px 0 0 6px;
 }
 
@@ -43,16 +51,23 @@
     border: none;
     border-radius: 0 6px 6px 0;
     background-color: #2B293D;
+<<<<<<< Updated upstream
     color: #fff;
+=======
+    color: #76F90E;
+>>>>>>> Stashed changes
     font-size: 15px;
     cursor: pointer;
     transition: background-color .3s ease-in-out;
 }
 
+<<<<<<< Updated upstream
 .button--submit:hover {
     background-color: #5e5dcd;
 }
 
+=======
+>>>>>>> Stashed changes
 .input:focus,
 .input:focus-visible {
     border-color: #3898EC;

@@ -16,6 +16,7 @@ function Card({ title, imgSrc }) {
         </div>
         <div className="right">
           <div className="eventDetails">
+<<<<<<< Updated upstream
             <div className="eventTitle">{title.toUpperCase()}</div>
             <div className="venue">Place</div>
             <div className="time">Time</div>
@@ -24,6 +25,19 @@ function Card({ title, imgSrc }) {
               <div className="interested">
                 <div className="interestedText">Interested</div>
               </div>
+=======
+            <div className="eventTitle">
+              {title.toUpperCase()}
+            </div>
+            <div className="venue">
+              Place
+            </div>
+            <div className="time">
+              Time
+            </div>
+            <div className="interested">
+              <div className="interestedText">Interested</div>
+>>>>>>> Stashed changes
             </div>
           </div>
         </div>

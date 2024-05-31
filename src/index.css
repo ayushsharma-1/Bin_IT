@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* write css here first */
 .background-video {
     position: absolute;
@@ -20,4 +21,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+=======
+body{
+    background-color: #DCF5DF;
+>>>>>>> Stashed changes
 }

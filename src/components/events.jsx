@@ -16,7 +16,13 @@ function CardGrid() {
     return (
         <>
             <div className="events">
+<<<<<<< Updated upstream
                 <h3>Latest Events</h3>
+=======
+                <div className="events-title">
+                    LATEST EVENTS
+                </div>
+>>>>>>> Stashed changes
                 <div className="card-grid">
                     {cardsData.map(card => (
                         <Card key={card.id} title={card.title} imgSrc={card.imgSrc} />

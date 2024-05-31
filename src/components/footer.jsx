@@ -5,6 +5,12 @@ function Footer() {
     return (
         <>
             <footer>
+<<<<<<< Updated upstream
+=======
+                <div className="bg">
+                    <img src="/footer-bg.png" alt="" />
+                </div>
+>>>>>>> Stashed changes
                 <div className="footer-columns">
                     <section className="footer-logo">
                         <img src="/BinIT-logo.svg" alt="BinIT-Logo" />

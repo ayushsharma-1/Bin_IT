@@ -1,6 +1,7 @@
 .events {
     height: 100%;
     width: 100%;
+<<<<<<< Updated upstream
     background: linear-gradient(180deg, rgba(79, 232, 76, 0.14) 27.56%, rgba(97, 173, 249, 0.17) 64.36%, rgba(19, 111, 245, 0.20) 93.66%, rgba(223, 93, 244, 0.16) 125.66%);
     padding: 2rem 5rem 0.3rem 5rem;
     border-radius: 1rem;
@@ -10,15 +11,35 @@
 .events h3 {
     font-size: 45px;
     padding-bottom: 20px;
+=======
+    padding: 2rem 5rem 0.3rem 5rem;
+    margin-top: 7rem;
+}
+
+.events-title {
+    font-family: Arial Black;
+    font-size: 3rem;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    color: #195A94;
+>>>>>>> Stashed changes
 }
 
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+<<<<<<< Updated upstream
     gap: 20px;
 }
 
 .card {
+=======
+    gap: 3rem;
+    margin-top: 2rem
+}
+
+.events .card {
+>>>>>>> Stashed changes
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;

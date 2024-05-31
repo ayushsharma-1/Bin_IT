@@ -19,4 +19,8 @@ function CreateEvent() {
     );
 }
 
+<<<<<<< Updated upstream
 export default CreateEvent;
+=======
+export default CreateEvent;
+>>>>>>> Stashed changes
