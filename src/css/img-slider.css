@@ -1,0 +1,99 @@
+.carousel {
+    width: 100%;
+    height: 60%;
+    border: 2px solid black;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    height: 605px;
+    position: relative; /* Ensure the caption can be positioned absolutely */
+}
+
+.carousel-caption {
+    width: 35%;
+    padding: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.699);
+    box-shadow: 10px 15px 25px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 5rem; /* Margin of 5rem from the left */
+    top: 25%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+}
+
+.carousel-item img {
+    flex: 1;
+    width: 100%;
+    height: 656px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@media screen and (max-width: 1048px) {
+    .carousel {
+        height: 45%; 
+    }
+    .carousel-item {
+        height: 450px;  
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 50%; 
+    }
+    .carousel-item {
+        height: 300px;
+    }
+    .prev, .next {
+        font-size: 20px;  
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        height: 35%; 
+    }
+    .carousel-item {
+        height: 350px;  
+    }
+    .prev, .next{
+        font-size: 18px;  
+        padding: 6px;
+    }
+}
