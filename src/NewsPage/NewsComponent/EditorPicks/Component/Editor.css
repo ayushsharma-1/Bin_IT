@@ -1,0 +1,33 @@
+.editor-pick-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* padding-right: 80px; */
+}
+
+.editor-pick-card img {
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 20%;
+    height: auto;
+    display: block;
+}
+
+.editor-article-meta-info {
+    padding: 20px;
+}
+
+.editor-article-meta-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.editor-article-meta-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}

@@ -1,0 +1,45 @@
+.SubscribeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #5C9F5F;
+  }
+  
+  .SubscribeContainer > div:nth-child(1) {
+    flex: 1;
+  }
+  
+  .SubscribeContainer > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .SubscribeContainer h2 {
+    margin-bottom: 10px;
+  }
+  
+  .SubscribeContainer p {
+    margin-bottom: 20px;
+  }
+  
+  .SubscribeContainer input[type="email"] {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .Subscribe_Input{
+    margin-top: 4%;
+  }
+  .SubscribeContainer button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .SubscribeContainer button:hover {
+    background-color: #0056b3;
+  }
+  

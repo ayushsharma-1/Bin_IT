@@ -1,0 +1,22 @@
+/* News.css */
+
+.NewsPage-Items {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center align the content */
+    padding: 20px; /* Add some padding around the content */
+    background-color: #DCF5DF;
+  }
+.NewsPage{
+    background-color: #DCF5DF;
+}
+.NewsPage-Header{
+    background-color: #E7FBE9;
+}
+@media (max-width: 1048px) {
+    .NewsPage-Items {
+      max-width: 100%; 
+      padding: 0; 
+      margin: 0;
+    }
+  }
+  

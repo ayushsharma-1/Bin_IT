@@ -1,0 +1,18 @@
+.community {
+    display: grid;
+    grid-template-columns: 6% 47% 47%;
+    height:100vh;
+  }
+  
+  .navBar {
+    grid-column: 1 / 2;
+  }
+  
+  .chat {
+    grid-column: 2 / 3;
+  }
+  
+  .group {
+    grid-column: 3 / 4;
+  }
+  

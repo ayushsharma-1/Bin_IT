@@ -1,0 +1,80 @@
+.community-group {
+  border: 1px solid brown;
+  background-color: #9fb3c4;
+}
+
+.community-search-container {
+  margin-top:1rem ;
+  display: flex;
+  align-items: center; 
+  margin-left: 2.5%;
+  margin-right:2.5%;
+}
+
+.community-search-input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 8px; /* Add some space between input and icon */
+  border-radius: 5%;
+}
+
+.community-create-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+}
+.community-group-bar {
+  background-color: #A3B8C6;
+  border-bottom: 1px solid black;
+  padding-left:10px ;
+  padding-bottom: -5px;
+}
+.community-group-GroupBar{
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+}
+
+
+
+/* .Group-card{
+  border: 1px solid red;
+  padding: 25px;
+  margin-top:30px;
+  margin-left: 90px;
+  margin-right: 90px;
+  background-color: #B3CBD0;
+
+}
+.Group-card-Ellipse{
+  margin: 0;
+} */
+
+.Group-card {
+  display: flex; /* Add this line */
+  align-items: center; /* Add this line */
+  border: 1px solid red;
+  padding: 25px;
+  margin-top: 30px;
+  margin-left: 90px;
+  margin-right: 90px;
+  background-color: #b3cbd0;
+}
+
+.Group-card-Ellipse {
+  margin-right: 15px;
+}
+
+.Group-card-groupname {
+  flex: 1;
+}
+
+.Group-card-teamname {
+  font-weight: bold; 
+  margin: 0;
+}
+
+.Group-card-Message {
+  color: #333; 
+  margin: 0;
+}

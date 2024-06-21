@@ -1,0 +1,77 @@
+.article {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #fff;
+  max-width: 100%; /* Ensure the card takes full width within the grid */
+}
+
+.article img {
+  max-width: 100%; /* Adjust the image width to fit within the card */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+  .article h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .article p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .article-meta-info1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .time-stamp-text-style {
+    font-size: 0.8rem;
+    color: #999;
+    margin-right: 10px;
+  }
+  
+  .article-meta-info {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  .article-meta-stats-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex-row-with-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .svg-container,
+  .svg-container1 {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #666;
+  }
+  .svg-container-share{
+  margin-right:270px;
+  }
+  .subtle-text-annotation{
+    margin-right: 260px;
+  }
+  /* .svg-container-bookmark{
+    margin-top:3%;
+    margin-right:300px;
+    } */
+  .text-info-box,
+  .subtle-text-annotation {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
