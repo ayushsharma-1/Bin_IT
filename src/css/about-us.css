@@ -64,3 +64,30 @@
 .about-card p{
     font-size: 20px;
 }
+
+
+/* About.jsx ka css */
+.team-members{
+    margin: 2rem 10rem;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #35636ac6, #5BA06F , #35636A);
+    border-radius: 25px;
+}
+
+.team-title{
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.team-members-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}

@@ -127,6 +127,7 @@
 .textbox-img {
     position: absolute;
     height: 3rem;
+    z-index: 2;
 }
 
 .email-img {

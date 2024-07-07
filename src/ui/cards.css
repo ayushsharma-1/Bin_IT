@@ -23,20 +23,20 @@
   object-fit: cover;
 }
 
-.bottom {
+.contentCard .bottom {
   padding: 1rem 2rem;
   display: flex;
   gap: 3rem;
 }
 
-.date {
+.contentCard .date {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
 }
 
-.dateInner {
+.contentCard .dateInner {
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
@@ -45,7 +45,7 @@
   display: inline-flex;
 }
 
-.month {
+.contentCard .month {
   text-align: center;
   color: #4539B4;
   font-size: 1.5rem;
@@ -54,7 +54,7 @@
   word-wrap: break-word;
 }
 
-.day {
+.contentCard .day {
   text-align: center;
   color: #2D2C3C;
   font-size: 1.6rem;
@@ -63,7 +63,7 @@
   word-wrap: break-word;
 }
 
-.eventDetails {
+.contentCard .eventDetails {
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
@@ -72,7 +72,7 @@
   display: inline-flex;
 }
 
-.eventTitle {
+.contentCard .eventTitle {
   width: 100%;
   color: #2D2C3C;
   font-size: 1.5rem;
@@ -81,7 +81,7 @@
   word-wrap: break-word;
 }
 
-.venue {
+.contentCard .venue {
   color: #5A5A5A;
   font-size: 1rem;
   font-family: Open Sans;
@@ -89,7 +89,7 @@
   word-wrap: break-word;
 }
 
-.time {
+.contentCard .time {
   width: 100%;
   color: #5A5A5A;
   font-size: 1rem;
@@ -99,28 +99,28 @@
   word-wrap: break-word;
 }
 
-.ticketInterestedCount {
+.contentCard .ticketInterestedCount {
   justify-content: flex-start;
   align-items: center;
   gap: 9px;
   display: inline-flex;
 }
 
-.ellipse {
+.contentCard .ellipse {
   width: 5px;
   height: 5px;
   background: #5A5A5A;
   border-radius: 50%;
 }
 
-.interested {
+.contentCard .interested {
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
   display: flex;
 }
 
-.interestedText {
+.contentCard .interestedText {
   color: #5A5A5A;
   font-size: 1rem;
   font-family: Open Sans;

@@ -1,92 +1,163 @@
-.events {
-    height: 100%;
-    width: 100%;
-    padding: 2rem 5rem 0.3rem 5rem;
-    margin-top: 7rem;
+.event {
+    display: flex;
+    background: linear-gradient(#519B6A, #8CC2A6, #649956);
 }
 
-.events-title {
-    font-family: Arial Black;
-    font-size: 3rem;
-    padding-bottom: 20px;
-    border-bottom: 2px solid black;
-    color: #195A94;
+/* sidebar start */
+.event-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 5rem;
+    border-right: 2px solid black;
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 2rem
+.clear,
+.location,
+.status,
+.length,
+.host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
 }
 
-.events .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
+.clear {
+    gap: 1.2rem;
 }
 
-.label {
-    font-family: inherit;
-    display: block;
-    width: 8em;
-    height: 2.6em;
-    line-height: 2.5em;
+.event .clear span {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.event span {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.event input[type="checkbox"] {
+    height: 1rem;
+    width: 1rem;
+}
+
+.event label {
+    font-size: 1.3rem;
+}
+
+/* Style the dropdown */
+.custom-select {
     position: relative;
-    overflow: hidden;
-    border: 2px solid #560bad;
-    transition: color 0.5s;
-    z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
-    font-weight: 500;
-    color: black;
-    background: white;
-    margin: 0 auto;
-    margin-top: 2rem;
-  }
-  
+    display: inline-block;
+}
 
-.label:before {
-    content: "";
+.custom-select select {
+    height: 2.5rem;
+    width: 15rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    appearance: none;
+    cursor: pointer;
+}
+
+.custom-select::after {
+    content: "\25BC";
     position: absolute;
-    z-index: -1;
-    background: #560bad;
-    height: 150px;
-    width: 200px;
-    border-radius: 50%;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
-.label:hover {
-    color: #fff;
+/* The switch - the box around the slider */
+.event .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3em;
+    height: 1.3em;
+    background: white;
+    border-radius: 15px;
 }
 
-.label:before {
-    top: 100%;
-    left: 100%;
-    transition: all .7s;
+.event .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.label:hover:before {
-    top: -30px;
-    left: -30px;
+.event .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border: 2px solid #414141;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.label:active:before {
-    background: #3a0ca3;
-    transition: background 0s;
+.event .slider:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    left: 0.2em;
+    bottom: 0.04em;
+    right: 0.6em;
+    background-color: rgb(0, 0, 0);
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-@media screen and (max-width: 1048px) {
-    .events {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.event .switch input:checked+.slider:before {
+    transform: translateX(1.5em);
+}
 
-    .card-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-    }
+/* sidebar end */
+
+
+/* event main */
+.event-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    align-items: center;
+    padding: 2rem 3rem;
+    gap: 2.5rem;
+}
+
+.event-main-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.event-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.5rem;
+    row-gap: 1.5rem;
+}
+
+.event input[type="text"] {
+    background: #D7DDBF;
+    border: none;
+    height: 3rem;
+    width: 30rem;
+    font-size: 1.5rem;
+    padding: 0 4rem 0 1rem;
+}
+
+.event  .search-icon {
+    position: absolute;
+    fill: #9e9ea7;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.7rem 0rem 0rem -2.5rem;
 }
