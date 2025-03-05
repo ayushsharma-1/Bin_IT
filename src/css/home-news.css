@@ -109,7 +109,8 @@
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .home-news-title {
-        font-size: 1.8rem;
+        font-size: 42px;
+        margin-left: 2rem;   
     }
 
     .news-grid {

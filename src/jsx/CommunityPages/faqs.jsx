@@ -13,6 +13,14 @@ function Faqs() {
         message: ''
     });
 
+    // FAQ State
+    const [expandedQuestion, setExpandedQuestion] = useState(null);
+
+    // Handle FAQ question click
+    const handleQuestionClick = (index) => {
+        setExpandedQuestion(expandedQuestion === index ? null : index);
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
     
@@ -26,7 +34,6 @@ function Faqs() {
             return;
         }
     
-        // Allow updating the email field, but validate on form submission
         setFormData({ ...formData, [name]: value });
     };
     
@@ -45,7 +52,7 @@ function Faqs() {
         }
     
         try {
-            const api=import.meta.env.VITE_API_KEY;
+            const api = import.meta.env.VITE_API_KEY;
             const response = await fetch(`${api}/contact/`, {
                 method: 'POST',
                 headers: {
@@ -66,10 +73,8 @@ function Faqs() {
         }
     };
     
-    
-
     const handleReset = (e) => {
-        e.preventDefault();  // ✅ Prevent unexpected behavior
+        e.preventDefault();
         setFormData({ name: '', email: '', message: '' });
         toast.info("Form reset successfully!", { position: "top-right" });
     };
@@ -77,7 +82,7 @@ function Faqs() {
     return (
         <>
             <Header />
-            <ToastContainer />  {/* ✅ Ensure ToastContainer is present */}
+            <ToastContainer />
             
             <div className="faqs">
                 <div className="faqs-header">
@@ -90,20 +95,7 @@ function Faqs() {
                     </h3>
                     <img src="/faqs-img/faq-img-1.png" alt="Confused-Image" />
                 </div>
-
-                {/* <div className="faqs-main">
-                    <div className="faqs-ques">
-                        <h1 className="faq-titles">Frequently Asked Questions (FAQs)</h1>
-                        <div className="faqs-ques-link">
-                            <FaqQues no='1' ques="How to register as a User?" />
-                            <FaqQues no='2' ques="How to Login?" />
-                            <FaqQues no='3' ques="How you can donate?" />
-                            <FaqQues no='4' ques="How to register as an NGO?" />
-                            <FaqQues no='5' ques="Thank you (this one is a placeholder 😂)" />
-                        </div>
-                    </div>
-                </div> */}
-
+                
                 <div className="contact" id='contact-area'>
                     <div className="contact-top">
                         <h1 className="contact-titles">CONTACT US</h1>
@@ -160,7 +152,42 @@ function Faqs() {
                         <img src="/faqs-img/faq-img-2.png" alt="Contact-Image" />
                     </div>
                 </div>
+                
+                <div className="faqs-main">
+                    <div className="faqs-ques">
+                        <h1 className="faq-titles">Frequently Asked Questions (FAQs)</h1>
+                        <div className="faqs-ques-link">
+                            <ul>
+                                <li onClick={() => handleQuestionClick(0)} className="faq-item">
+                                    <div className="faq-question">How to register as a User?</div>
+                                    <div className={`faq-answer ${expandedQuestion === 0 ? 'open' : ''}`}>
+                                        To register as a user, go to the registration page and fill out the form.
+                                    </div>
+                                </li>
+                                <li onClick={() => handleQuestionClick(1)} className="faq-item">
+                                    <div className="faq-question">How to Login?</div>
+                                    <div className={`faq-answer ${expandedQuestion === 1 ? 'open' : ''}`}>
+                                        Click on the login button at the top right of the page, then enter your email and password.
+                                    </div>
+                                </li>
+                                <li onClick={() => handleQuestionClick(2)} className="faq-item">
+                                    <div className="faq-question">How to register an NGO?</div>
+                                    <div className={`faq-answer ${expandedQuestion === 2 ? 'open' : ''}`}>
+                                        Go to the NGO registration section in the user dashboard and submit the required documents.
+                                    </div>
+                                </li>
+                                <li onClick={() => handleQuestionClick(3)} className="faq-item">
+                                    <div className="faq-question">How can you donate?</div>
+                                    <div className={`faq-answer ${expandedQuestion === 3 ? 'open' : ''}`}>
+                                        You can donate via the donation page, where you can choose the amount and method of payment.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <Footer />
         </>
     );
