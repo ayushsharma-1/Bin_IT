@@ -101,10 +101,10 @@
     padding-bottom: 2.3rem;
 }
 
-/* .report-submit {
-    background: url('/public/img-slide-4.jpg') no-repeat center center;
+.report-submit {
+    background: url('/public/report-bg-1.png') no-repeat center center;
     background-size: cover;
-} */
+}
 
 .report-location {
     display: flex;
