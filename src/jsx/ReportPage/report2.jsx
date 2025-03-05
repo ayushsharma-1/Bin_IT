@@ -1,20 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from '../Commen-Components/header';
 import '../../css/report-page.css';
 
 function Stepper({ componentList, formData, handleSubmit, handleFormDataChange }) {
   const [step, setStep] = useState(0);
+  const navigate = useNavigate();
   const n = componentList.length;
 
-  // Check if all required fields are filled for the current step
   const isStepComplete = () => {
-    // console.log("Form Data in Stepper:", formData);
     const currentStepData = componentList[step].props.formData;
     if (step === 0) {
       return currentStepData.areaType && currentStepData.pollutionPlace && currentStepData.pollutionType;
     } else if (step === 1) {
-      // Ensure city, state, and pincode are filled for step 1
-    return currentStepData.city && currentStepData.pincode && currentStepData.location;
+      return currentStepData.city && currentStepData.pincode && currentStepData.location;
     } else if (step === 2) {
       return currentStepData.latitude && currentStepData.longitude;
     }
@@ -29,16 +30,22 @@ function Stepper({ componentList, formData, handleSubmit, handleFormDataChange }
     if (step < n - 1) setStep(step + 1);
   };
 
+  const handleFinalSubmit = async () => {
+    await handleSubmit(); // Submit form
+    toast.success("Report submitted successfully!", { autoClose: 2000 });
+
+    // Redirect to home page after 2 seconds
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
+  };
+
   const StepElements = ({ currentStep }) => {
-    const elements = [];
-    for (let i = 0; i < n; i++) {
-      elements.push(
-        <span key={i} className={currentStep >= i ? "active" : "deactive"}>
-          {i + 1}
-        </span>
-      );
-    }
-    return elements;
+    return [...Array(n)].map((_, i) => (
+      <span key={i} className={currentStep >= i ? "active" : "deactive"}>
+        {i + 1}
+      </span>
+    ));
   };
 
   return (
@@ -57,7 +64,7 @@ function Stepper({ componentList, formData, handleSubmit, handleFormDataChange }
             Previous
           </button>
           {step === n - 1 ? (
-            <button onClick={handleSubmit} disabled={!isStepComplete()}>
+            <button onClick={handleFinalSubmit} disabled={!isStepComplete()}>
               Submit Report
             </button>
           ) : (
