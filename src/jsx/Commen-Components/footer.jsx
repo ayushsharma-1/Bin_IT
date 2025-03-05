@@ -9,7 +9,6 @@ function Footer() {
                 <img src="/footer-bg.png" alt="Footer Background" />
             </div>
             <div className="footer-columns">
-                {/* Logo Section */}
                 <section className="footer-logo">
                     <div className="logo-main">
                         <h1>BinIT</h1>
