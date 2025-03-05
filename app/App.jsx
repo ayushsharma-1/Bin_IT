@@ -8,7 +8,6 @@ import Home from '../src/jsx/HomePage/home';
 import ReportPage from '../src/jsx/ReportPage/report.jsx';
 import Ngo from '../src/jsx/RegistrationPages/ngo.jsx';
 
-
 function App() {
     return (
         <Routes>
