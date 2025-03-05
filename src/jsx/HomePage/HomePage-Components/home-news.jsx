@@ -9,20 +9,26 @@ function HomeNews() {
 
     useEffect(() => {
         const fetchNews = async () => {
-            const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-            const query = "health effects of water pollution";
-            const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${apiKey}&language=en&pageSize=5`;
-
-            if (!apiKey) {
-                setError("API Key not found. Make sure the .env file is configured correctly.");
-                setLoading(false);
-                return;
-            }
+            const api = import.meta.env.VITE_NEWS_API;
+            const url = `${api}/news`;  // URL of your backend API to get news from MongoDB
 
             try {
                 const response = await axios.get(url);
-                if (response.data && response.data.articles.length > 0) {
-                    setNews(response.data.articles);
+                if (response.data && response.data.length > 0) {
+                    // Function to shuffle the news articles array
+                    const shuffleArray = (array) => {
+                        let shuffled = array.slice(); // Create a copy of the array to avoid mutating the original
+                        for (let i = shuffled.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap elements
+                        }
+                        return shuffled;
+                    };
+
+                    // Shuffle and pick first 6 articles
+                    const randomNews = shuffleArray(response.data).slice(0, 5);
+                    setNews(randomNews);
+
                 } else {
                     setError("No news articles found.");
                 }
@@ -48,7 +54,7 @@ function HomeNews() {
                     news.map((article, index) => (
                         <div key={index} className={`news-card ${index === 0 ? "featured" : ""}`}>
                             <img
-                                src={article.urlToImage || "/news-placeholder.png"}
+                                src={article.urlToImage || "/news-placeholder.png"} // Fallback image if no image found
                                 alt="News"
                                 className="news-image"
                                 loading="lazy"
