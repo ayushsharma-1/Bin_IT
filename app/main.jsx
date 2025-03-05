@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";  // ✅ Updated to HashRouter
 import App from "./App.jsx";
+
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!clerkPubKey || !clerkPubKey.startsWith("pk_")) {
@@ -12,8 +13,8 @@ if (!clerkPubKey || !clerkPubKey.startsWith("pk_")) {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <ClerkProvider publishableKey={clerkPubKey}>
-        <BrowserRouter> {/* ✅ Only ONE BrowserRouter */}
+        <HashRouter>  {/* ✅ Updated to HashRouter */}
             <App />
-        </BrowserRouter>
+        </HashRouter>
     </ClerkProvider>
 );
