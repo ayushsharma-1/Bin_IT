@@ -28,12 +28,12 @@
     font-size: 3.9rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     text-align: center;
 }
 
 .faq-co-title {
-    margin-top: 10px; 
+    /* margin-top: 10px;  */
     font-size: 2.2rem;
     font-weight: normal;
     color: #666;
@@ -59,7 +59,7 @@
 
 .faqs-header img {
     height: 20rem;
-    margin-bottom: -4.4rem;
+    margin-bottom: -5.4rem;
     transition: transform 0.3s ease-in-out;
     width: 100%;
     object-fit: contain;
@@ -80,7 +80,6 @@
     padding: 3rem 5rem;
     width: 100%;
     max-width: 1200px;
-    margin-top: 3rem;
 }
 
 /* FAQ ITEM */
@@ -104,7 +103,6 @@
     font-size: 1.8rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 10px;
 }
 
 /* FAQ ANSWER */
@@ -126,7 +124,7 @@
     padding-bottom: 10px;
 }
 
-/* CONTACT SECTION */
+/* contact section */
 .contact {
     display: flex;
     flex-direction: column;
@@ -137,7 +135,7 @@
 
 .contact-top {
     border-top: 1px solid black;
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,7 +145,6 @@
 .contact-titles {
     font-size: 3rem;
     font-weight: bold;
-    text-align: center;
 }
 
 .contact-here-u-go {
@@ -159,17 +156,13 @@
 /* CONTACT FORM */
 .contact-bottom {
     display: flex;
-    justify-content: space-between;  /* Aligns items horizontally */
-    align-items: center;            /* Vertically centers the items */
-    gap: 3rem;
-    flex-wrap: nowrap;              /* Prevent wrapping */
-    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 }
 
 .contact-bottom img {
     height: 25rem;
-    width: 45%;                       /* Ensures image takes up 45% of the container */
-    object-fit: contain;
 }
 
 .contact-form {
@@ -182,7 +175,6 @@
     padding: 2rem 5rem;
     filter: drop-shadow(10px 10px 10px grey);
     border-radius: 15px;
-    width: 45%;                       /* Ensures form takes up 45% of the container */
     transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -202,8 +194,7 @@
 
 .contact-input input,
 .contact-input textarea {
-    width: 100%;
-    max-width: 27rem;
+    width: 27rem;
     border-radius: 10px;
     border: 2px solid #1e90ff;
     filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.1));
@@ -249,6 +240,14 @@
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
+    .faqs-header img{
+        margin-bottom: -4.7rem;
+    }
+
+    .faqs{
+        padding: 1rem;
+    }
+
     .faqs-header {
         padding: 2rem;
     }
@@ -265,9 +264,21 @@
         font-size: 1.4rem;
     }
 
+    .faq-question{
+        font-size: 22px;
+    }
+
+    .faq-answer{
+        font-size: 20px;
+    }
+
+    .contact-titles{
+        text-align: center;
+    }
+
     .contact-bottom {
-        flex-direction: column;  /* Stack items vertically on smaller screens */
-        gap: 2rem;
+        flex-direction: column-reverse;  /* Stack items vertically on smaller screens */
+        gap: 0.5rem;
     }
 
     .contact-bottom img {
@@ -280,7 +291,7 @@
     }
 
     .faqs-main {
-        padding: 2rem;
+        padding: 0.5rem;
         margin-top: 1rem; /* Reduced margin-top to bring Contact Us section closer */
     }
 
@@ -320,7 +331,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .faq-titles {
         font-size: 2.2rem;
         margin-bottom: 10px;
@@ -364,10 +375,10 @@
     }
 
     .faqs-main {
-        margin-top: 0.5rem; /* Further reduced margin-top */
+        margin-top: 0.5rem; 
     }
 
     .contact {
-        margin-bottom: 1.5rem; /* Reduced margin-bottom for closer positioning */
+        margin-bottom: 1.5rem;
     }
-}
+} */

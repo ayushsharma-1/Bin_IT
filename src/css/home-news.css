@@ -1,9 +1,12 @@
 .home-news {
-    padding: 20px;
     font-family: Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 5rem 2rem 5rem;
+    border-bottom: 2px solid black;
+
 }
 
 .home-news-title {
@@ -12,8 +15,6 @@
     font-family: Arial Black;
     padding: 0 0 1rem 0;
     color: #195A94;
-    margin-bottom: 2rem;
-    margin-left: -100px;
 }
 
 /* News Grid */
@@ -21,6 +22,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    padding-top: 1.5rem;
 }
 
 /* News Card Styling */
