@@ -26,7 +26,7 @@ function HomeNews() {
                     };
 
                     // Shuffle and pick first 6 articles
-                    const randomNews = shuffleArray(response.data).slice(0, 5);
+                    const randomNews = shuffleArray(response.data).slice(0, 7);
                     setNews(randomNews);
 
                 } else {
