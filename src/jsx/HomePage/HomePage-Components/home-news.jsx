@@ -53,13 +53,16 @@ function HomeNews() {
                 ) : (
                     news.map((article, index) => (
                         <div key={index} className={`news-card ${index === 0 ? "featured" : ""}`}>
-                            <img
-                                src={article.urlToImage || "/news-placeholder.png"} // Fallback image if no image found
-                                alt="News"
-                                className="news-image"
-                                loading="lazy"
-                                onError={(e) => (e.target.src = "/news-placeholder.png")}
-                            />
+                            {/* Making the image clickable */}
+                            <a href={article.url} target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src={article.urlToImage || "/news-placeholder.png"} // Fallback image if no image found
+                                    alt="News"
+                                    className="news-image"
+                                    loading="lazy"
+                                    onError={(e) => (e.target.src = "/news-placeholder.png")}
+                                />
+                            </a>
                             <div className="news-content">
                                 <h3 className="news-title">{article.title}</h3>
                                 <p className="news-description">
@@ -75,6 +78,7 @@ function HomeNews() {
                                               }).format(new Date(article.publishedAt))
                                             : "N/A"}
                                     </span>
+                                    {/* Read More button */}
                                     <a
                                         href={article.url}
                                         target="_blank"
