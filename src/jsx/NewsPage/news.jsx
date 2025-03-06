@@ -18,7 +18,6 @@ const News = () => {
 
             try {
                 const response = await axios.get(url);
-                console.log(response);
                 if (response.data && response.data.length > 0) {
                     // Shuffle the articles and select random ones
                     const shuffledArticles = shuffleArray(response.data);
