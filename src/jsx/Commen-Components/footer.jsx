@@ -43,7 +43,6 @@ function Footer() {
                     </ul>
                 </section>
 
-                {/* Help Center Section */}
                 <section className="footer-right">
                     <h3>Help Center</h3>
                     <ul>
