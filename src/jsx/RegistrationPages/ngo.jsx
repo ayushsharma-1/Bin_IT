@@ -23,8 +23,6 @@ function Ngo() {
         if (!formData.name) newErrors.name = "NGO Name is required.";
         if (!formData.registrationNumber) newErrors.registrationNumber = "Registration Number is required.";
         if (!formData.location) newErrors.location = "Location is required.";
-        // if (!formData.contact || !/^\d{10}$/.test(formData.contact))
-        //     newErrors.contact = "Enter a valid 10-digit contact number.";
         if (!formData.website || !/^https?:\/\/[\w-]+(\.[\w-]+)+[/#?]?.*$/.test(formData.website))
             newErrors.website = "Enter a valid website URL (https://example.com).";
         if (!formData.establishedYear || !/^\d{4}$/.test(formData.establishedYear))
