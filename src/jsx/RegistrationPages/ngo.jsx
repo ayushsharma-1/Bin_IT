@@ -50,7 +50,7 @@ function Ngo() {
     
         try {
             const response = await axios.post(
-                `${apiKey}/ngo`, 
+                `${apiKey}/registerNGO`, 
                 formData, 
                 {
                     headers: {
