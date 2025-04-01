@@ -25,18 +25,8 @@ function HomeNews() {
                         return shuffled;
                     };
 
-                    // Filter duplicates by checking article URL
-                    const uniqueUrls = new Set();
-                    const uniqueNews = response.data.filter((article) => {
-                        if (uniqueUrls.has(article.url)) {
-                            return false;  // Skip if URL already exists
-                        }
-                        uniqueUrls.add(article.url);
-                        return true;
-                    });
-
-                    // Shuffle and pick first 5 unique articles
-                    const randomNews = shuffleArray(uniqueNews).slice(0, 5);
+                    // Shuffle and pick first 6 articles
+                    const randomNews = shuffleArray(response.data).slice(0, 5);
                     setNews(randomNews);
 
                 } else {
@@ -51,6 +41,7 @@ function HomeNews() {
 
         fetchNews();
     }, []);
+
     return (
         <div className="home-news">
             <div className="home-news-title">NEWS UPDATE</div>
