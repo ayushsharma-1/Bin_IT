@@ -25,22 +25,35 @@ function HomeNews() {
                         return shuffled;
                     };
 
-                    // Shuffle and pick first 6 articles
-                    const randomNews = shuffleArray(response.data).slice(0, 5);
-                    setNews(randomNews);
+                    // // Shuffle and pick first 6 articles
+                    // const randomNews = shuffleArray(response.data).slice(0, 5);
+                    // setNews(randomNews);
+                        // Filter duplicates by checking article URL
+                        const uniqueUrls = new Set();
+                        const uniqueNews = response.data.filter((article) => {
+                            if (uniqueUrls.has(article.url)) {
+                                return false;  // Skip if URL already exists
+                            }
+                            uniqueUrls.add(article.url);
+                            return true;
+                        });
 
-                } else {
-                    setError("No news articles found.");
-                }
-            } catch (error) {
-                setError(`Error fetching news: ${error.response?.data?.message || error.message}`);
-            } finally {
-                setLoading(false);
-            }
-        };
+                        // Shuffle and pick first 5 unique articles
+                        const randomNews = shuffleArray(uniqueNews).slice(0, 7);
+                        setNews(randomNews);
 
-        fetchNews();
-    }, []);
+                        } else {
+                        setError("No news articles found.");
+                        }
+                        } catch (error) {
+                        setError(`Error fetching news: ${error.response?.data?.message || error.message}`);
+                        } finally {
+                        setLoading(false);
+                        }
+                        };
+
+                        fetchNews();
+                        }, []);
 
     return (
         <div className="home-news">
