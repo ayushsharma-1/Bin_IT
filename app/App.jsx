@@ -7,6 +7,7 @@ import Home from '../src/jsx/HomePage/home';
 import ReportPage from '../src/jsx/ReportPage/report.jsx';
 import Ngo from '../src/jsx/RegistrationPages/ngo.jsx';
 import ChatbitEmbed from '../src/jsx/chatbot.jsx';
+import { Analytics } from "@vercel/analytics/react"
 
 const Loader = () => {
     return (
@@ -44,6 +45,7 @@ function App() {
                     <Route path="/ngo-registration" element={<Ngo />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
+                <Analytics />
                 </>
             )}
         </>
