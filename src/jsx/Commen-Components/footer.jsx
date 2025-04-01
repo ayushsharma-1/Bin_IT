@@ -34,7 +34,6 @@ function Footer() {
                     </span>
                 </section>
 
-                {/* Information Section */}
                 <section className="footer-right">
                     <h3>Information</h3>
                     <ul>
@@ -44,7 +43,6 @@ function Footer() {
                     </ul>
                 </section>
 
-                {/* Help Center Section */}
                 <section className="footer-right">
                     <h3>Help Center</h3>
                     <ul>
