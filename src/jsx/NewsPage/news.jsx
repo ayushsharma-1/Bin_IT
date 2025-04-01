@@ -10,6 +10,7 @@ const News = () => {
     const [loading, setLoading] = useState(true);  // Loading state for initial fetch
     const [page, setPage] = useState(1);  // Track page number for pagination
     const [hasMore, setHasMore] = useState(true);  // Check if more articles exist
+    const [uniqueUrls, setUniqueUrls] = useState(new Set()); // To track unique articles by URL
 
     useEffect(() => {
         const fetchNews = async () => {
@@ -22,7 +23,20 @@ const News = () => {
                     // Shuffle the articles and select random ones
                     const shuffledArticles = shuffleArray(response.data);
                     const randomArticles = shuffledArticles.slice(0, 15); // Get only 15 random articles
-                    setArticles((prevArticles) => [...prevArticles, ...randomArticles]);  // Append to existing articles
+
+                    // Filter out articles that have already been seen
+                    const newArticles = randomArticles.filter(article => {
+                        if (uniqueUrls.has(article.url)) {
+                            return false; // Skip if URL already exists
+                        }
+                        // Add URL to set
+                        uniqueUrls.add(article.url);
+                        return true;
+                    });
+
+                    // Append only unique new articles
+                    setArticles((prevArticles) => [...prevArticles, ...newArticles]);
+
                     if (response.data.length < 15) {
                         setHasMore(false);  // No more articles left
                     }
@@ -61,7 +75,7 @@ const News = () => {
         return Math.floor(seconds) + ' seconds ago';
     };
 
-    const getAuthorName = (name) => (name ? name : 'Unknown Author');
+    // const getAuthorName = (name) => (name ? name : 'Unknown Author');
 
     const displayNews = () => {
         return articles.map((article, index) => (
@@ -82,7 +96,7 @@ const News = () => {
                     </div>
                     <div className="article-meta">
                         <span>{timeSince(article.publishedAt)}</span>
-                        <span>{`by ${getAuthorName(article.author)}`}</span>
+                        {/* <span>{`by ${getAuthorName(article.author)}`}</span> */}
                     </div>
                     <div className="article-actions">
                         <a href={article.url} className="read-more-btn">Read More</a>
@@ -127,7 +141,7 @@ const News = () => {
                 <span className="trending-news-description">{articles[0].description || 'No description available'}</span>
                 <div className="trending-news-meta">
                     <span>{timeSince(articles[0].publishedAt)}</span>
-                    <span>{`by ${getAuthorName(articles[0].author)}`}</span>
+                    {/* <span>{`by ${getAuthorName(articles[0].author)}`}</span> */}
                 </div>
                 {/* Add Read More in the trending section */}
                 <a href={articles[0].url} className="read-more-btn trending-read-more">Read More</a>
